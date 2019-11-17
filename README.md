@@ -6,6 +6,6 @@ After finishing my IntralismSoresChecker project I thought it would be a nice id
 
 ![profiel](https://i.imgur.com/wsr0RX6.png)
 
-![score](https://i.imgur.com/IQJGXBO.png)
+![score](https://i.imgur.com/n3fTm3F.png)
 
 ![credits](https://i.imgur.com/bYeJTLx.png)
