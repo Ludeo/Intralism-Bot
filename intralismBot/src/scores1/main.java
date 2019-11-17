@@ -13,12 +13,12 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class main extends ListenerAdapter {
-	String prefix = ""; //add the prefix you want to use here
-	static String token = ""; //add the bot token here
+	
+	String prefix = "i"; //change the prefix here
 	
 	public static void main(String args[]) throws LoginException {
 		JDABuilder builder = new JDABuilder(AccountType.BOT);
-		builder.setToken(token);
+		builder.setToken(""); //add your bot token here
 		builder.addEventListeners(new main());
 		builder.setActivity(Activity.playing("Intralism"));
 		builder.build();
@@ -64,14 +64,16 @@ public class main extends ListenerAdapter {
 								double difference = (double)scoresObj[i][5] - (double)scoresObj[i][4];
 								difference = (double)Math.round(difference * 100)/100;
 								
-								infos = "Map: " + scoresObj[i][0] + "\nScore: " 
-								+ scoresObj[i][1] + "\nAccuracy: " + scoresObj[i][2] + "%\nMisses: " + scoresObj[i][3] + "\nPoints: " 
-								+ scoresObj[i][4] + "\nMax Points: " + scoresObj[i][5] + "\nDifference: " + difference +"\nBroken ?: " 
-								+ scoresObj[i][7];
-								
 								EmbedBuilder eb = new EmbedBuilder();
 								eb.setTitle(user + "#" + rank);
-								eb.setDescription(infos);
+								eb.addField("Map", scoresObj[i][0]+"", true);
+								eb.addField("Score", scoresObj[i][1]+"", true);
+								eb.addField("Accuracy", scoresObj[i][2]+"", true);
+								eb.addField("Misses", scoresObj[i][3]+"", true);
+								eb.addField("Points",scoresObj[i][4]+"",true);
+								eb.addField("Max Points", scoresObj[i][5]+"", true);
+								eb.addField("Difference", difference+"", true);
+								eb.addField("Broken?", scoresObj[i][7]+"", true);
 								
 								int grank = Integer.parseInt(rank);
 								if(grank == 1) {
@@ -245,7 +247,7 @@ public class main extends ListenerAdapter {
 				EmbedBuilder eb = new EmbedBuilder();
 				eb.setDescription("The Intralism Bot was programmed by Ludeo#8554 and it is open source. When you click on \"Ludeo#8554\" you will get to the github page." 
 				+ "\nSpecial Thanks to FlyingRabidUnicornPig™#5435 for helping me out with the code and Special Thanks to Kiri#1000 for checking"
-				+ "all maps to see if they are broken or not.");
+				+ " all maps to see if they are broken or not.");
 				String url = event.getGuild().getMemberById("311861142114926593").getUser().getAvatarUrl();
 				System.out.println(url);
 				eb.setAuthor("Ludeo#8554","https://github.com/Ludeo/Intralism-Bot",  url);
