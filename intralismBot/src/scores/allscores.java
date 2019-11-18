@@ -1,4 +1,4 @@
-package scores1;
+package scores;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,7 +30,7 @@ public class allscores {
 			allscores[i][6] = (double)0.0;
 		}
 		
-		allscores[0][0] = (String)"ã€æ±æ–¹Vocalï¼Tranceã€‘ Cardiac Sound";
+		allscores[0][0] = (String)"ã€?æ?±æ–¹Vocalï¼?Tranceã€‘ Cardiac Sound";
     	allscores[0][5] = (double) 11.71;
     	allscores[0][7] = (String)"Not Broken";
     	
@@ -374,7 +374,7 @@ public class allscores {
     	allscores[85][5] = (double) 19.93;
     	allscores[85][7] = (String)"Not Broken";
     	
-    	allscores[86][0] = (String)"No title - GRRP Remix - English Coverã€KIRA feat, rachieã€‘";
+    	allscores[86][0] = (String)"No title - GRRP Remix - English Coverã€?KIRA feat, rachieã€‘";
     	allscores[86][5] = (double) 17.64;
     	allscores[86][7] = (String)"Broken";
     	
@@ -566,7 +566,7 @@ public class allscores {
     	allscores[133][5] = (double) 8.61;
     	allscores[133][7] = (String)"Broken";
     	
-    	allscores[134][0] = (String)"TUMENECO - ã“ã‚“ãªã«æœˆãŒç»®ä¸½ãªå¤œã¯(off vocal)";
+    	allscores[134][0] = (String)"TUMENECO - ã?“ã‚“ã?ªã?«æœˆã?Œç»®ä¸½ã?ªå¤œã?¯(off vocal)";
     	allscores[134][5] = (double) 6.24;
     	allscores[134][7] = (String)"Broken";
     	
@@ -630,11 +630,11 @@ public class allscores {
     	allscores[149][5] = (double) 10.35;
     	allscores[149][7] = (String)"Not Broken";
     	
-    	allscores[150][0] = (String)"ãã§ã‚’ã¬ã‚‰ã—ãŸ";
+    	allscores[150][0] = (String)"ã??ã?§ã‚’ã?¬ã‚‰ã?—ã?Ÿ";
     	allscores[150][5] = (double) 4.08;
     	allscores[150][7] = (String)"Broken";
     	
-		while( (line=bufReader.readLine()) != null )
+		while((line=bufReader.readLine()) != null)
 		{
 			if(line.contains("Cardiac Sound") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
 		    	allscores[0][1] = (int) functions.getScore(bufReader.readLine());
@@ -1442,7 +1442,7 @@ public class allscores {
 		    	allscores[133][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[133][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
-			} else if(line.contains("TUMENECO - ã“ã‚“ãªã«æœˆãŒç»®ä¸½ãªå¤œã¯(off vocal)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+			} else if(line.contains("TUMENECO - ã?“ã‚“ã?ªã?«æœˆã?Œç»®ä¸½ã?ªå¤œã?¯(off vocal)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
 		    	allscores[134][1] = (int) functions.getScore(bufReader.readLine());
 		    	allscores[134][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[134][3] = (int) functions.getMiss(bufReader.readLine());
@@ -1538,7 +1538,7 @@ public class allscores {
 		    	allscores[149][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[149][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
-			} else if(line.contains("ãã§ã‚’ã¬ã‚‰ã—ãŸ") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+			} else if(line.contains("ã??ã?§ã‚’ã?¬ã‚‰ã?—ã?Ÿ") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
 		    	allscores[150][1] = (int) functions.getScore(bufReader.readLine());
 		    	allscores[150][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[150][3] = (int) functions.getMiss(bufReader.readLine());
@@ -1605,7 +1605,7 @@ public class allscores {
 		String pictureLink = "";
 		String[] infos = {"","","","","","",""};
 		
-		while( (line=bufReader.readLine()) != null ) {
+		while((line=bufReader.readLine()) != null) {
 			if(line.contains("<title>")) {
 				user = line;
 		    	int anumber = user.indexOf(">");  

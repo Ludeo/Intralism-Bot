@@ -1,4 +1,4 @@
-package scores1;
+package scores;
 
 public class functions {
 	

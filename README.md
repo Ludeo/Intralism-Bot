@@ -2,12 +2,16 @@ After finishing my IntralismSoresChecker project I thought it would be a nice id
 
 Bot invite link: https://discordapp.com/oauth2/authorize?client_id=340873693464887298&scope=bot&permissions=8
 
+top.gg link: https://top.gg/bot/340873693464887298
+
 **Commands**
 
-![commands](https://i.imgur.com/0LW5SvS.png)
+![commands](https://i.imgur.com/dvwZb4i.png)
 
-![profiel](https://i.imgur.com/wsr0RX6.png)
+![profile](https://i.imgur.com/erqX8T6.png)
 
-![score](https://i.imgur.com/n3fTm3F.png)
+![score](https://i.imgur.com/FG40ksA.png)
 
-![credits](https://i.imgur.com/bYeJTLx.png)
+![credits](https://i.imgur.com/C6i4kXQ.png)
+
+![top10](https://i.imgur.com/AwK5YpN.png)
