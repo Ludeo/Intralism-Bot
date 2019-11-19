@@ -1,16 +1,61 @@
 package commands;
 
 import java.awt.Color;
+import java.io.FileReader;
 import java.io.IOException;
+
+import org.json.simple.JSONArray;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.Message.MentionType;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import scores.allscores;
 
 public class score {
 	
 	public static void score(String[] args, String prefix, MessageReceivedEvent event) {
-		
-		if(args.length != 3) {
+		String id = "";
+		String mapname = "";
+		if(args.length == 2) {
+			String discordid = event.getMessage().getAuthor().getId();
+			
+			JSONParser jsonParser = new JSONParser();
+			Object user = new Object();
+			
+			try {
+				user = jsonParser.parse(new FileReader(".\\user.json"));
+			} catch (IOException | ParseException e) {
+				e.printStackTrace();
+				user = "";
+			}
+			
+			JSONArray userArray= new JSONArray();
+			userArray = (JSONArray) user;
+			for(int i = 0;i<userArray.size();i++) {
+				if(userArray.get(i).toString().contains(discordid)) {
+					String userx = userArray.get(i).toString();
+					int anumber = userx.indexOf("Intralism");
+					int bnumber = userx.indexOf(",", anumber);
+					id = userx.substring(anumber+14,bnumber-1);
+				}
+			}
+			if(id=="") {
+				event.getMessage().getChannel().sendMessage("You don't have a Intralism account linked to your Discord account or you didn't" 
+			+" use the right parameters. Check " + prefix + "commands for usage help").queue();
+				return;
+			}
+			
+			if(args[1].length() < 3) {
+				event.getMessage().getChannel().sendMessage("The mapname length must at least be 3 characters long").queue();
+				return;
+			}
+			
+			mapname = args[1];
+			
+		} else if(args.length != 3) {
 			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();
 			return;
 		} else if(args[1] == null) {
@@ -19,15 +64,48 @@ public class score {
 		} else if(args[2] == null) {
 			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();
 			return;
+		} else {
+			if(args[1].contains("@")) {
+				User user = event.getMessage().getMentionedUsers().get(0);
+				String userid = user.getId();
+				
+				String discordid = userid;
+				
+				JSONParser jsonParser = new JSONParser();
+				Object userO = new Object();
+				
+				try {
+					userO = jsonParser.parse(new FileReader(".\\user.json"));
+				} catch (IOException | ParseException e) {
+					e.printStackTrace();
+					userO = "";
+				}
+				
+				JSONArray userArray= new JSONArray();
+				userArray = (JSONArray) userO;
+				for(int i = 0;i<userArray.size();i++) {
+					if(userArray.get(i).toString().contains(discordid)) {
+						String userx = userArray.get(i).toString();
+						int anumber = userx.indexOf("Intralism");
+						int bnumber = userx.indexOf(",", anumber);
+						id = userx.substring(anumber+14,bnumber-1);
+					}
+				}
+				if(id=="") {
+					event.getMessage().getChannel().sendMessage("The mentioned user hasn't linked his Intralism account to his Discord account").queue();
+					return;
+				}
+			} else {
+				id = args[1];
+			}
+			
+			if(args[2].length() < 3) {
+				event.getMessage().getChannel().sendMessage("The mapname length must at least be 3 characters long").queue();
+				return;
+			}
+			mapname = args[2];
 		}
 		
-		if(args[2].length() < 3) {
-			event.getMessage().getChannel().sendMessage("The mapname length must at least be 3 characters long").queue();
-			return;
-		}
-		
-		String id = args[1];
-		String mapname = args[2];
 		String user = "";
 		String rank = "";
 		try {
@@ -92,7 +170,8 @@ public class score {
 			}
 			
 			if(bool) event.getMessage().getChannel().sendMessage(eb.build()).queue();
-			else event.getMessage().getChannel().sendMessage("I couldn't find the map or the user you were looking for").queue();
+			else event.getMessage().getChannel().sendMessage("I couldn't find the map or the user you were looking for or you are not using " 
+			+ " the right parameters. Check " + prefix + "commands for usage help").queue();
 			
 		} catch (IOException e) {
 			e.printStackTrace();

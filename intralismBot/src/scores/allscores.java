@@ -1543,7 +1543,6 @@ public class allscores {
 		    	allscores[150][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[150][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[150][4] = (double) functions.getPoints(bufReader.readLine());
-		    	System.out.println("test");
 		    	
 			} else if(line.contains("<title>")) {
 				user = line;
