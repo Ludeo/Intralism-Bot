@@ -10,7 +10,13 @@ public class score {
 	
 	public static void score(String[] args, String prefix, MessageReceivedEvent event) {
 		
-		if(args.length < 3) {
+		if(args.length != 3) {
+			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();
+			return;
+		} else if(args[1] == null) {
+			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();
+			return;
+		} else if(args[2] == null) {
 			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();
 			return;
 		}
@@ -90,6 +96,8 @@ public class score {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch(IllegalArgumentException e) {
+			event.getMessage().getChannel().sendMessage("There is no player with this ID").queue();
 		}
 		
 		return;

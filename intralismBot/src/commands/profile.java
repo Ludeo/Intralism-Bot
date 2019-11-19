@@ -9,7 +9,10 @@ import scores.allscores;
 public class profile {
 	
 	public static void profile(String[] args, String prefix, MessageReceivedEvent event) {
-		if(args.length < 2) {
+		if(args.length != 2) {
+			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();
+			return;
+		} else if(args[1] == null) {
 			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();
 			return;
 		}
@@ -147,6 +150,8 @@ public class profile {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch(IllegalArgumentException e) {
+			event.getMessage().getChannel().sendMessage("There is no player with this ID").queue();
 		}
 	}
 
