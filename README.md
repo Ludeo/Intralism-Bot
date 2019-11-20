@@ -17,3 +17,5 @@ top.gg link: https://top.gg/bot/340873693464887298
 ![top10](https://i.imgur.com/AwK5YpN.png)
 
 ![link](https://i.imgur.com/v9t9hzn.png)
+
+![unlink](https://i.imgur.com/h4yNyaP.png)

@@ -16,11 +16,13 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class link {
 	
-	public static void link(String[] args, String link, MessageReceivedEvent event) {
+	public static void link(String[] args, String prefix, MessageReceivedEvent event) {
 		
 		if(args.length != 2) {
+			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();
 			return;
 		} else if(args[1] == null) {
+			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();
 			return;
 		}
 		

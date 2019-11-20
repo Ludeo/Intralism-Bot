@@ -10,11 +10,11 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class main extends ListenerAdapter {
 	
-	String prefix = "i!"; //change prefix here
+	String prefix = "i!"; //change the prefix here
 	
 	public static void main(String args[]) throws LoginException {
 		JDABuilder builder = new JDABuilder(AccountType.BOT);
-		builder.setToken(""); //add the bot token here
+		builder.setToken(""); //add your bot token here
 		builder.addEventListeners(new main());
 		builder.setActivity(Activity.playing("Intralism"));
 		builder.build();
@@ -50,6 +50,9 @@ public class main extends ListenerAdapter {
 			case "link":
 				commands.link.link(args, prefix, event);
 				break;
+			case "unlink":
+				commands.unlink.unlink(args, prefix, event);
+				break;
 			default:
 				event.getMessage().getChannel().sendMessage("This command doesn't exit. Type " + prefix + "commands to get all available commands.").queue();
 				break;
@@ -59,8 +62,8 @@ public class main extends ListenerAdapter {
 	
 	@Override
 	public void onReady(ReadyEvent ready) {
-		System.out.println("TESTING BOT");
-		System.out.println("Connected to " + ready.getGuildAvailableCount() + " out of " + ready.getGuildTotalCount() + " guilds");
+		System.out.println("---------------------\n");
+		System.out.println("Connected to " + ready.getGuildAvailableCount() + " out of " + ready.getGuildTotalCount() + " guilds\n---------------------");
 	}
 
 }

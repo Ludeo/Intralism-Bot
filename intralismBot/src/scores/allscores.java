@@ -1586,7 +1586,7 @@ public class allscores {
 			}
 	
 		}
-
+		
 		return allscores;
 	}
 	

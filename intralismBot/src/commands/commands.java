@@ -18,6 +18,7 @@ public class commands {
 		eb.addField(prefix+"commands","Shows all the commands you can use", true);
 		eb.addField(prefix+"top10", "Shows the current Top 10 players from Intralism", true);
 		eb.addField(prefix+"link <ID>", "Links your discord account with the Intralism account that has the given ID", true);
+		eb.addField(prefix+"unlink","Unlinks your linked Intralism account", true);
 		eb.addField("ID Explanation", "When you are looking at a intralism profile you can see the ID in the URL", false);
 		Color pink = new Color(255,105,180);
 		eb.setColor(pink);

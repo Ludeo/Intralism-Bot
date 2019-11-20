@@ -131,12 +131,27 @@ public class score {
 						scoresObj[i][6] = (double)0;
 						
 					} else {
+						if(scoresObj[i][7].equals("Broken")) {
+							if((double)scoresObj[i][4]==(double)scoresObj[i][5]) {
+								if(scoresObj[i][0] == "Indigo Child - Nostalgia") {
+									scoresObj[i][4] = (double) 1.87;
+								} else if(scoresObj[i][0] == "Mizutani Hiromi - Hidamari Michi to Ren-chon") {
+									scoresObj[i][4] = (double) 2.11;
+								} else if(scoresObj[i][0] == "Oskar Schuster - Wunder") {
+									scoresObj[i][4] = (double) 2.86;
+								} else {
+									double actualpoints = (double)scoresObj[i][5]-0.01;
+									scoresObj[i][4] = actualpoints;
+								}
+								
+							}
+						}
 						double difference = (double)scoresObj[i][5] - (double)scoresObj[i][4];
 						difference = (double)Math.round(difference * 100)/100;
 						eb.setTitle(user + "#" + rank);
 						eb.addField("Map", scoresObj[i][0]+"", true);
 						eb.addField("Score", scoresObj[i][1]+"", true);
-						eb.addField("Accuracy", scoresObj[i][2]+"", true);
+						eb.addField("Accuracy", scoresObj[i][2]+"%", true);
 						eb.addField("Misses", scoresObj[i][3]+"", true);
 						eb.addField("Points",scoresObj[i][4]+"",true);
 						eb.addField("Max Points", scoresObj[i][5]+"", true);
@@ -166,10 +181,11 @@ public class score {
 
 					}
 					bool = true;
+					event.getMessage().getChannel().sendMessage(eb.build()).queue();
 				} 
 			}
 			
-			if(bool) event.getMessage().getChannel().sendMessage(eb.build()).queue();
+			if(bool) return;
 			else event.getMessage().getChannel().sendMessage("I couldn't find the map or the user you were looking for or you are not using " 
 			+ " the right parameters. Check " + prefix + "commands for usage help").queue();
 			
