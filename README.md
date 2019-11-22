@@ -6,7 +6,7 @@ top.gg link: https://top.gg/bot/340873693464887298
 
 **Commands**
 
-![commands](https://i.imgur.com/HzixL33.png)
+![commands](https://i.imgur.com/qJBKZv3.png)
 
 ![profile](https://i.imgur.com/WZsY7p0.png)
 
@@ -19,3 +19,7 @@ top.gg link: https://top.gg/bot/340873693464887298
 ![link](https://i.imgur.com/v9t9hzn.png)
 
 ![unlink](https://i.imgur.com/h4yNyaP.png)
+
+![support](https://i.imgur.com/6qcQDBb.png)
+
+![broken](https://i.imgur.com/4VWeuOF.png)

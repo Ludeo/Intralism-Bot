@@ -6,7 +6,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class credits {
 	
-	public static void credits(String[] args, String prefix, MessageReceivedEvent event) {
+	public static void main(String[] args, String prefix, MessageReceivedEvent event) {
 		EmbedBuilder eb = new EmbedBuilder();
 		eb.setDescription("The Intralism Bot was programmed by Ludeo#8554 and it is open source. When you click on \"Ludeo#8554\" you will get to the github page." 
 		+ "\nSpecial Thanks to FlyingRabidUnicornPig™#5435 for helping me out with the code and Special Thanks to Kiri#1000 for checking"

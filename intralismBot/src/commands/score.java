@@ -3,20 +3,18 @@ package commands;
 import java.awt.Color;
 import java.io.FileReader;
 import java.io.IOException;
-
+import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.entities.Message.MentionType;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import scores.allscores;
 
 public class score {
 	
-	public static void score(String[] args, String prefix, MessageReceivedEvent event) {
+	public static void main(String[] args, String prefix, MessageReceivedEvent event) {
 		String id = "";
 		String mapname = "";
 		if(args.length == 2) {
@@ -66,6 +64,12 @@ public class score {
 			return;
 		} else {
 			if(args[1].contains("@")) {
+				List<User> users = event.getMessage().getMentionedUsers();
+				if(users.size() == 0) {
+					event.getMessage().getChannel().sendMessage("There is no player with this ID").queue();
+					return;
+				}
+				
 				User user = event.getMessage().getMentionedUsers().get(0);
 				String userid = user.getId();
 				
@@ -118,7 +122,6 @@ public class score {
 		
 		try {
 			Object[][] scoresObj = scores.allscores.getAllScores("https://intralism.khb-soft.ru/?player=" + id);
-			String infos = "";
 			boolean bool = false;
 			EmbedBuilder eb = new EmbedBuilder();
 			for (int i = 0; i<scoresObj.length;i++) {

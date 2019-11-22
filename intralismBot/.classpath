@@ -4,6 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/lucas/eclipse-workspace/intralismBot/JDA-4.0.0_39-withDependencies.jar"/>
 	<classpathentry kind="lib" path="C:/Users/lucas/eclipse-workspace/intralismBot/jsoup-1.11.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/lucas/eclipse-workspace/intralismBot/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lucas/eclipse-workspace/intralismBotTesting/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

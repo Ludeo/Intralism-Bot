@@ -3,6 +3,7 @@ package commands;
 import java.awt.Color;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
@@ -15,7 +16,7 @@ import scores.allscores;
 
 public class profile {
 	
-	public static void profile(String[] args, String prefix, MessageReceivedEvent event) {
+	public static void main(String[] args, String prefix, MessageReceivedEvent event) {
 		String id = "";
 		if(args.length == 1) {
 			String discordid = event.getMessage().getAuthor().getId();
@@ -54,6 +55,12 @@ public class profile {
 			return;
 		} else {
 			if(args[1].contains("@")) {
+				List<User> users = event.getMessage().getMentionedUsers();
+				if(users.size() == 0) {
+					event.getMessage().getChannel().sendMessage("There is no player with this ID").queue();
+					return;
+				}
+				
 				User user = event.getMessage().getMentionedUsers().get(0);
 				String userid = user.getId();
 				

@@ -1,22 +1,17 @@
 package commands;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
-import com.fasterxml.jackson.core.JsonParser;
-
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class link {
 	
-	public static void link(String[] args, String prefix, MessageReceivedEvent event) {
+	public static void main(String[] args, String prefix, MessageReceivedEvent event) {
 		
 		if(args.length != 2) {
 			event.getMessage().getChannel().sendMessage("You are not using the right parameters. Check " + prefix + "commands for usage help").queue();

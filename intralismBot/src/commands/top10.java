@@ -11,7 +11,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class top10 {
 	
-	public static void top10(String[] args, String prefix, MessageReceivedEvent event) {
+	public static void main(String[] args, String prefix, MessageReceivedEvent event) {
 		try {
 			Document doc = Jsoup.connect("https://intralism.khb-soft.ru/?page=ranks").get();
 			String profileInfo = doc.toString();

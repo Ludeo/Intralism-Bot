@@ -10,11 +10,11 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class main extends ListenerAdapter {
 	
-	String prefix = "i!"; //change the prefix here
+	String prefix = "i!"; //change prefix here
 	
 	public static void main(String args[]) throws LoginException {
 		JDABuilder builder = new JDABuilder(AccountType.BOT);
-		builder.setToken(""); //add your bot token here
+		builder.setToken(""); //add bot token here
 		builder.addEventListeners(new main());
 		builder.setActivity(Activity.playing("Intralism"));
 		builder.build();
@@ -33,25 +33,31 @@ public class main extends ListenerAdapter {
 		
 		switch(args[0].toLowerCase()) {
 			case "score":
-				commands.score.score(args, prefix, event);
+				commands.score.main(args, prefix, event);
 				break;
 			case "profile":
-				commands.profile.profile(args, prefix, event);
+				commands.profile.main(args, prefix, event);
 				break;
 			case "credits":
-				commands.credits.credits(args, prefix, event);
+				commands.credits.main(args, prefix, event);
 				break;
 			case "commands":
-				commands.commands.commands(args, prefix, event);
+				commands.commands.main(args, prefix, event);
 				break;
 			case "top10":
-				commands.top10.top10(args, prefix, event);
+				commands.top10.main(args, prefix, event);
 				break;
 			case "link":
-				commands.link.link(args, prefix, event);
+				commands.link.main(args, prefix, event);
 				break;
 			case "unlink":
-				commands.unlink.unlink(args, prefix, event);
+				commands.unlink.main(args, prefix, event);
+				break;
+			case "support":
+				commands.support.main(args, prefix, event);
+				break;
+			case "broken":
+				commands.broken.main(args, prefix, event);
 				break;
 			default:
 				event.getMessage().getChannel().sendMessage("This command doesn't exit. Type " + prefix + "commands to get all available commands.").queue();
@@ -62,7 +68,7 @@ public class main extends ListenerAdapter {
 	
 	@Override
 	public void onReady(ReadyEvent ready) {
-		System.out.println("---------------------\n");
+		System.out.println("---------------------\nTESTING BOT");
 		System.out.println("Connected to " + ready.getGuildAvailableCount() + " out of " + ready.getGuildTotalCount() + " guilds\n---------------------");
 	}
 

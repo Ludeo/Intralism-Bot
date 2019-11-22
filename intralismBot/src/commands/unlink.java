@@ -12,7 +12,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class unlink {
 	
-	public static void unlink(String[] args, String prefix, MessageReceivedEvent event) {
+	public static void main(String[] args, String prefix, MessageReceivedEvent event) {
 		String discordid = event.getAuthor().getId();
 		
 		JSONParser jsonParser = new JSONParser();

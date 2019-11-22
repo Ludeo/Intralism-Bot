@@ -6,7 +6,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class commands {
 	
-	public static void commands(String[] args, String prefix, MessageReceivedEvent event) {
+	public static void main(String[] args, String prefix, MessageReceivedEvent event) {
 		EmbedBuilder eb = new EmbedBuilder();
 		eb.setTitle("All commands");
 		eb.addField(prefix+"profile (<ID>|mention user)", "Checks the profile of the user with the given ID, of yourself when no ID is given "
@@ -19,6 +19,8 @@ public class commands {
 		eb.addField(prefix+"top10", "Shows the current Top 10 players from Intralism", true);
 		eb.addField(prefix+"link <ID>", "Links your discord account with the Intralism account that has the given ID", true);
 		eb.addField(prefix+"unlink","Unlinks your linked Intralism account", true);
+		eb.addField(prefix+"support", "Shows you how to get support for the Intralism Bot", true);
+		eb.addField(prefix+"broken", "Shows you every map thats broken", true);
 		eb.addField("ID Explanation", "When you are looking at a intralism profile you can see the ID in the URL", false);
 		Color pink = new Color(255,105,180);
 		eb.setColor(pink);
