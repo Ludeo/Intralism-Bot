@@ -4,17 +4,20 @@ import javax.security.auth.login.LoginException;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.events.message.guild.react.GenericGuildMessageReactionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 
 public class main extends ListenerAdapter {
 	
-	String prefix = "i!"; //change prefix here
+	String prefix = "i!"; //change the token here
 	
 	public static void main(String args[]) throws LoginException {
 		JDABuilder builder = new JDABuilder(AccountType.BOT);
-		builder.setToken(""); //add bot token here
+		builder.setToken(""); //add your bot token here
 		builder.addEventListeners(new main());
 		builder.setActivity(Activity.playing("Intralism"));
 		builder.build();
@@ -44,6 +47,9 @@ public class main extends ListenerAdapter {
 			case "commands":
 				commands.commands.main(args, prefix, event);
 				break;
+			case "help":
+				commands.commands.main(args, prefix, event);
+				break;
 			case "top10":
 				commands.top10.main(args, prefix, event);
 				break;
@@ -59,6 +65,10 @@ public class main extends ListenerAdapter {
 			case "broken":
 				commands.broken.main(args, prefix, event);
 				break;
+			case "botstats":
+				commands.botstats.main(args, prefix, event);
+				break;
+			
 			default:
 				event.getMessage().getChannel().sendMessage("This command doesn't exit. Type " + prefix + "commands to get all available commands.").queue();
 				break;
@@ -68,8 +78,8 @@ public class main extends ListenerAdapter {
 	
 	@Override
 	public void onReady(ReadyEvent ready) {
-		System.out.println("---------------------\nTESTING BOT");
+		System.out.println("---------------------");
 		System.out.println("Connected to " + ready.getGuildAvailableCount() + " out of " + ready.getGuildTotalCount() + " guilds\n---------------------");
 	}
-
+	
 }

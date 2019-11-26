@@ -25,7 +25,7 @@ public class profile {
 			Object user = new Object();
 			
 			try {
-				user = jsonParser.parse(new FileReader(".\\user.json"));
+				user = jsonParser.parse(new FileReader("user.json"));
 			} catch (IOException | ParseException e) {
 				e.printStackTrace();
 				user = "";
@@ -107,6 +107,7 @@ public class profile {
 			double totaldifference = 0;
 			int hundredcount = 0;
 			int mapcount = alldata.length;
+			int mapsplayed = alldata.length;
 			for(int i = 0; i<alldata.length;i++) {
 				if(alldata[i][0] != null) {
 					double points = (double) alldata[i][4];
@@ -150,13 +151,17 @@ public class profile {
 						hundredcount++;
 					}
 					
+					if((double)alldata[i][4] == 0) {
+						mapsplayed--;
+					}
+					
 				}
 			}
 			
-			double avgaccexact = totalacc / mapcount;
+			double avgaccexact = totalacc / mapsplayed;
 			double avgacc = (double)Math.round(avgaccexact * 10000)/10000;
 			
-			double avgmiss = (double)totalmiss / mapcount;
+			double avgmiss = (double)totalmiss / mapsplayed;
 			avgmiss = (double) Math.round(avgmiss * 100)/100;
 			
 			totaldifference = (double) Math.round(totaldifference * 100)/100;
@@ -187,7 +192,11 @@ public class profile {
 			
 			EmbedBuilder eb = new EmbedBuilder();
 			eb.setDescription("");
-			eb.setAuthor(user + "#" + globalrank,"https://intralism.khb-soft.ru/?player=" + id,pictureLink);
+			if(globalrank.contentEquals("?")) {
+				eb.setAuthor(user + "#" + globalrank +"   BANNED","https://intralism.khb-soft.ru/?player=" + id,pictureLink);
+			} else {
+				eb.setAuthor(user + "#" + globalrank,"https://intralism.khb-soft.ru/?player=" + id,pictureLink);
+			}
 			eb.addField("Global Rank", globalrank + " / " + totalglobalrank, true);
 			eb.addField("Country", country, true);
 			eb.addField("Country Rank", countryrank + " / " + totalcountryrank, true);
@@ -203,25 +212,31 @@ public class profile {
 			eb.addField("100% Plays", hundredcount+"", true);
 			eb.addField("Total Maps", mapcount+"", true);
 			
-			int grank = Integer.parseInt(globalrank);
-			if(grank == 1) {
-				Color green = new Color(0,255,0);
-				eb.setColor(green);
-			}else if(grank <= 10 ) {
-				Color yellow = new Color(255,215,0);
-				eb.setColor(yellow);
-			} else if(grank > 10 && grank <=25) {
-				Color purple = new Color(148,0,211);
-				eb.setColor(purple);
-			} else if(grank > 25 && grank <= 100) {
-				Color red = new Color(255,0,0);
-				eb.setColor(red);
-			} else if(grank > 100 && grank <= 500) {
-				Color blue = new Color(0,191,255);
-				eb.setColor(blue);
-			} else {
+			int grank = 0;
+			if(globalrank.contentEquals("?")) {
 				Color black = new Color(0,0,0);
 				eb.setColor(black);
+			} else {
+				grank = Integer.parseInt(globalrank);
+				if(grank == 1) {
+					Color green = new Color(0,255,0);
+					eb.setColor(green);
+				}else if(grank <= 10 ) {
+					Color yellow = new Color(255,215,0);
+					eb.setColor(yellow);
+				} else if(grank > 10 && grank <=25) {
+					Color purple = new Color(148,0,211);
+					eb.setColor(purple);
+				} else if(grank > 25 && grank <= 100) {
+					Color red = new Color(255,0,0);
+					eb.setColor(red);
+				} else if(grank > 100 && grank <= 500) {
+					Color blue = new Color(0,191,255);
+					eb.setColor(blue);
+				} else {
+					Color black = new Color(0,0,0);
+					eb.setColor(black);
+				}
 			}
 			
 			event.getMessage().getChannel().sendMessage(eb.build()).queue();
@@ -229,6 +244,7 @@ public class profile {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch(IllegalArgumentException e) {
+			
 			event.getMessage().getChannel().sendMessage("There is no player with this ID").queue();
 		}
 	}

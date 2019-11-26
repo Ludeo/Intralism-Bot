@@ -151,7 +151,6 @@ public class score {
 						}
 						double difference = (double)scoresObj[i][5] - (double)scoresObj[i][4];
 						difference = (double)Math.round(difference * 100)/100;
-						eb.setTitle(user + "#" + rank);
 						eb.addField("Map", scoresObj[i][0]+"", true);
 						eb.addField("Score", scoresObj[i][1]+"", true);
 						eb.addField("Accuracy", scoresObj[i][2]+"%", true);
@@ -161,29 +160,51 @@ public class score {
 						eb.addField("Difference", difference+"", true);
 						eb.addField("Broken?", scoresObj[i][7]+"", true);
 						
-						int grank = Integer.parseInt(rank);
-						if(grank == 1) {
-							Color green = new Color(0,255,0);
-							eb.setColor(green);
-						}else if(grank <=10 ) {
-							Color yellow = new Color(255,215,0);
-							eb.setColor(yellow);
-						} else if(grank > 10 && grank <=25) {
-							Color purple = new Color(148,0,211);
-							eb.setColor(purple);
-						} else if(grank > 25 && grank <= 100) {
-							Color red = new Color(255,0,0);
-							eb.setColor(red);
-						} else if(grank > 100 && grank <= 500) {
-							Color blue = new Color(0,191,255);
-							eb.setColor(blue);
-						} else {
+						int grank = 0;
+						if(rank.contentEquals("?")) {
 							Color black = new Color(0,0,0);
 							eb.setColor(black);
+						} else {
+							grank = Integer.parseInt(rank);
+							if(grank == 1) {
+								Color green = new Color(0,255,0);
+								eb.setColor(green);
+							}else if(grank <=10 ) {
+								Color yellow = new Color(255,215,0);
+								eb.setColor(yellow);
+							} else if(grank > 10 && grank <=25) {
+								Color purple = new Color(148,0,211);
+								eb.setColor(purple);
+							} else if(grank > 25 && grank <= 100) {
+								Color red = new Color(255,0,0);
+								eb.setColor(red);
+							} else if(grank > 100 && grank <= 500) {
+								Color blue = new Color(0,191,255);
+								eb.setColor(blue);
+							} else {
+								Color black = new Color(0,0,0);
+								eb.setColor(black);
+							}
 						}
+						
 
 					}
 					bool = true;
+					
+					try {
+						String[] array = allscores.getUser_Rank("https://intralism.khb-soft.ru/?player=" + id);
+						user = array[0];
+						String globalrank = array[1];
+						String pictureLink = array[6];
+						if(rank.contentEquals("?")) {
+							eb.setAuthor(user+"#"+globalrank+"   BANNED","https://intralism.khb-soft.ru/?player=" + id,pictureLink);
+						} else {
+							eb.setAuthor(user+"#"+globalrank,"https://intralism.khb-soft.ru/?player=" + id,pictureLink);
+						}
+						
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					} 
 					event.getMessage().getChannel().sendMessage(eb.build()).queue();
 				} 
 			}

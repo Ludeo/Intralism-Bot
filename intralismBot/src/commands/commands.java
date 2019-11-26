@@ -15,12 +15,13 @@ public class commands {
 		+ "when no ID is given and you have your Intralism account linked or it shows the profile of the user you mentioned when he linked "
 		+"his Intralism account", true);
 		eb.addField(prefix+"credits","Shows the credits of the Intralism-Bot", true);
-		eb.addField(prefix+"commands","Shows all the commands you can use", true);
+		eb.addField(prefix+"commands | "+prefix+"help","Shows all the commands you can use", true);
 		eb.addField(prefix+"top10", "Shows the current Top 10 players from Intralism", true);
 		eb.addField(prefix+"link <ID>", "Links your discord account with the Intralism account that has the given ID", true);
 		eb.addField(prefix+"unlink","Unlinks your linked Intralism account", true);
 		eb.addField(prefix+"support", "Shows you how to get support for the Intralism Bot", true);
 		eb.addField(prefix+"broken", "Shows you every map thats broken", true);
+		eb.addField(prefix+"botstats","Shows statistics about the Intralism Bot",true);
 		eb.addField("ID Explanation", "When you are looking at a intralism profile you can see the ID in the URL", false);
 		Color pink = new Color(255,105,180);
 		eb.setColor(pink);

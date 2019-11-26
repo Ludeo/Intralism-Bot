@@ -1544,45 +1544,6 @@ public class allscores {
 		    	allscores[150][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[150][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
-			} else if(line.contains("<title>")) {
-				user = line;
-		    	int anumber = user.indexOf(">");  
-		    	int bnumber = user.toString().indexOf("<", anumber);
-		    	user = user.substring(anumber+13, bnumber);
-		    	
-			} else if(line.contains("strong>Global Rank")) {
-				line = bufReader.readLine();
-				globalrank = line;
-		    	int anumber = globalrank.indexOf("\">");  
-		    	int bnumber = globalrank.toString().indexOf("</span", anumber);
-		    	globalrank = globalrank.substring(anumber+2, bnumber);
-		    	
-		    	totalglobalrank = line;
-		    	anumber = totalglobalrank.indexOf("</span>");
-		    	totalglobalrank = totalglobalrank.substring(anumber+10, line.length());
-		    	
-			} else if(line.contains("Country Rank")) {
-				line = bufReader.readLine();
-				countryrank = line;
-				int anumber = countryrank.indexOf("\">");
-				int bnumber = countryrank.toString().indexOf("</span", anumber);
-				countryrank = countryrank.substring(anumber+2, bnumber);
-				
-				totalcountryrank = line;
-				anumber = totalcountryrank.indexOf("</span");
-				totalcountryrank = totalcountryrank.substring(anumber+10, line.length());
-				
-			} else if(line.contains(">#")) {
-				country = bufReader.readLine();
-				int anumber = country.indexOf("title=\"");
-				int bnumber = country.toString().indexOf("><span", anumber);
-				country = country.substring(anumber+7,bnumber-1);
-				
-			} else if(line.contains("og:image")) {
-				pictureLink = bufReader.readLine();
-				int anumber = pictureLink.indexOf("content");
-				int bnumber = pictureLink.toString().indexOf(">");
-				pictureLink = pictureLink.substring(anumber+9, bnumber-1);
 			}
 	
 		}
