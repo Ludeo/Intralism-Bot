@@ -14,13 +14,6 @@ public class allscores {
 		BufferedReader bufReader = new BufferedReader(new StringReader(profileInfo));
 		String line=null;
 		Object allscores[][] = new Object[151][8];
-		String user = "";
-		String globalrank = ""; 
-		String totalglobalrank = ""; 
-		String countryrank = "";
-		String totalcountryrank = "";
-		String country = "";
-		String pictureLink = "";
 		
 		for(int i = 0; i<allscores.length;i++) {
 			allscores[i][1] = (int) 0;
@@ -30,7 +23,7 @@ public class allscores {
 			allscores[i][6] = (double)0.0;
 		}
 		
-		allscores[0][0] = (String)"�?�?�方Vocal�?Trance】 Cardiac Sound";
+		allscores[0][0] = (String)"【東方Vocal／Trance】 Cardiac Sound";
     	allscores[0][5] = (double) 11.71;
     	allscores[0][7] = (String)"Not Broken";
     	
@@ -374,7 +367,7 @@ public class allscores {
     	allscores[85][5] = (double) 19.93;
     	allscores[85][7] = (String)"Not Broken";
     	
-    	allscores[86][0] = (String)"No title - GRRP Remix - English Cover�?KIRA feat, rachie】";
+    	allscores[86][0] = (String)"No title - GRRP Remix - English Cover【KIRA feat. rachie】";
     	allscores[86][5] = (double) 17.64;
     	allscores[86][7] = (String)"Broken";
     	
@@ -566,7 +559,7 @@ public class allscores {
     	allscores[133][5] = (double) 8.61;
     	allscores[133][7] = (String)"Broken";
     	
-    	allscores[134][0] = (String)"TUMENECO - �?�ん�?��?�月�?�绮丽�?�夜�?�(off vocal)";
+    	allscores[134][0] = (String)"TUMENECO - こんなに月が绮丽な夜は(off vocal)";
     	allscores[134][5] = (double) 6.24;
     	allscores[134][7] = (String)"Broken";
     	
@@ -630,7 +623,7 @@ public class allscores {
     	allscores[149][5] = (double) 10.35;
     	allscores[149][7] = (String)"Not Broken";
     	
-    	allscores[150][0] = (String)"�??�?�を�?�ら�?��?�";
+    	allscores[150][0] = (String)"そでをぬらした";
     	allscores[150][5] = (double) 4.08;
     	allscores[150][7] = (String)"Broken";
     	

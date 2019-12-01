@@ -6,7 +6,7 @@ top.gg link: https://top.gg/bot/340873693464887298
 
 **Commands**
 
-![commands](https://i.imgur.com/IBiuKiG.png)
+![commands](https://i.imgur.com/d4xRzoy.png)
 
 ![profile](https://i.imgur.com/WZsY7p0.png)
 
@@ -24,4 +24,12 @@ top.gg link: https://top.gg/bot/340873693464887298
 
 ![broken](https://i.imgur.com/4VWeuOF.png)
 
-i[botstats](https://i.imgur.com/rwllNx4.png)
+![botstats](https://i.imgur.com/rwllNx4.png)
+
+![allscores](https://i.imgur.com/FoJWORc.png)
+
+![invite](https://i.imgur.com/jtE1oEz.png)
+
+![farm](https://i.imgur.com/HW6UyMM.png)
+
+![tryhard](https://i.imgur.com/Xj5ahaE.png)
