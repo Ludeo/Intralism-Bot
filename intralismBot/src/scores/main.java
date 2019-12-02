@@ -8,16 +8,17 @@ import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.events.guild.GuildJoinEvent;
+import net.dv8tion.jda.api.events.guild.GuildLeaveEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class main extends ListenerAdapter {
 	
-	String prefix = "i!"; //change prefix here
+	String prefix = "i!"; //change the prefix here
 	
 	public static void main(String args[]) throws LoginException {
 		JDABuilder builder = new JDABuilder(AccountType.BOT);
-		builder.setToken(""); //add bot token here
+		builder.setToken(""); //add your bot token here
 		builder.addEventListeners(new main());
 		builder.addEventListeners(new GuildMessageReactionEventListener());
 		builder.setActivity(Activity.playing("Intralism"));
@@ -87,6 +88,9 @@ public class main extends ListenerAdapter {
 			case "tryhard":
 				commands.farm.main(args, prefix, event, 0);
 				break;
+			case "recent":
+				commands.recent.main(args, prefix, event);
+				break;
 			default:
 				event.getMessage().getChannel().sendMessage("This command doesn't exit. Type " + prefix + "commands to get all available commands.").queue();
 				break;
@@ -109,6 +113,11 @@ public class main extends ListenerAdapter {
 	@Override
 	public void onGuildJoin(GuildJoinEvent event) {
 		System.out.println("Joined the Guild: "+event.getGuild().getName()+"\nUsercount: "+event.getGuild().getMembers().size()+"\n---------------------");
+	}
+	
+	@Override
+	public void onGuildLeave(GuildLeaveEvent event) {
+		System.out.println("Left the Guild: "+event.getGuild().getName()+"\nUsercount: "+event.getGuild().getMembers().size()+"\n---------------------");
 	}
 	
 }

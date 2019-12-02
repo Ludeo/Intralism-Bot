@@ -64,6 +64,8 @@ public class commands {
 			+"when he has his Intralism account linked or yourself when you have your Intralism account linked, can still get on maps",true);
 			eb.addField(prefix+"tryhard (<ID>|mention user)","Shows how much points the player, with the given ID, the player that you mentioned "
 			+"when he has his Intralism account linked or yourself when you have your Intralism account linked, can still get on maps",true);
+			eb.addField(prefix+"recent (<ID>|mentioned user)","Shows the most recent score of the user with the given ID, of the mentioned user"
+			+" when he has his Intralism account linked or of yourself when you have your Intralism account linked",true);
 			eb.addField("ID Explanation", "When you are looking at a intralism profile you can see the ID in the URL", false);
 			eb.setColor(pink);
 			eb.setFooter("Page 3/3");

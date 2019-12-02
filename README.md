@@ -1,4 +1,4 @@
-After finishing my IntralismSoresChecker project I thought it would be a nice idea to have a Intralism Bot. To set it up for yourself just change the prefix to the prefix that you want to use and add the bot token (both at the top of main.java).
+After finishing my IntralismSoresChecker project I thought it would be a nice idea to have a Intralism Bot. To set it up for yourself just change the prefix to the prefix that you want to use and add the bot token (both at the top of main.java). You should also change the ID in the GuildMessageReactionEventListener.java file (it's in the listener package) where it says "contentEquals("340873693464887298")" to the ID of your Bot.  
 
 Bot invite link: https://discordapp.com/oauth2/authorize?client_id=340873693464887298&scope=bot&permissions=8
 
@@ -33,3 +33,5 @@ top.gg link: https://top.gg/bot/340873693464887298
 ![farm](https://i.imgur.com/HW6UyMM.png)
 
 ![tryhard](https://i.imgur.com/Xj5ahaE.png)
+
+![recent](https://i.imgur.com/RZuMU0l.png)

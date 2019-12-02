@@ -275,6 +275,8 @@ public class farm {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			event.getMessage().getChannel().sendMessage("There is no player with this ID").queue();
 		}
 		
 	}
