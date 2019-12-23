@@ -13,7 +13,7 @@ public class allscores {
 		String profileInfo = doc.toString();
 		BufferedReader bufReader = new BufferedReader(new StringReader(profileInfo));
 		String line=null;
-		Object allscores[][] = new Object[151][8];
+		Object allscores[][] = new Object[157][8];
 		
 		for(int i = 0; i<allscores.length;i++) {
 			allscores[i][1] = (int) 0;
@@ -626,6 +626,30 @@ public class allscores {
     	allscores[150][0] = (String)"そでをぬらした";
     	allscores[150][5] = (double) 4.08;
     	allscores[150][7] = (String)"Broken";
+    	
+    	allscores[151][0] = (String)"UNDEAD CORPORATION - Setsugetsu Ouka no Kuni";
+    	allscores[151][5] = (double) 2.73;
+    	allscores[151][7] = (String)"Not Broken";
+    	
+    	allscores[152][0] = (String)"Taio Cruz - Telling The World (Rio OST)";
+    	allscores[152][5] = (double) 7.62;
+    	allscores[152][7] = (String)"Broken";
+    	
+    	allscores[153][0] = (String)"This Game - No Game No Life";
+    	allscores[153][5] = (double) 9.88;
+    	allscores[153][7] = (String)"Not Broken";
+    	
+    	allscores[154][0] = (String)"The Super Ball - RIN! RIN HI! HI!";
+    	allscores[154][5] = (double) 13.45;
+    	allscores[154][7] = (String)"Broken";
+    	
+    	allscores[155][0] = (String)"DJ TOTTO - Precious * Star [feat. Enako]";
+    	allscores[155][5] = (double) 13.49;
+    	allscores[155][7] = (String)"Broken";
+    	
+    	allscores[156][0] = (String)"One Shot, One Kill - Varien";
+    	allscores[156][5] = (double) 18.6;
+    	allscores[156][7] = (String)"Not Broken";
     	
 		while((line=bufReader.readLine()) != null)
 		{
@@ -1536,6 +1560,42 @@ public class allscores {
 		    	allscores[150][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[150][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[150][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("UNDEAD CORPORATION - Setsugetsu Ouka no Kuni") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[151][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[151][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[151][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[151][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Taio Cruz - Telling The World (Rio OST)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[152][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[152][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[152][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[152][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("This Game - No Game No Life") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[153][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[153][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[153][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[153][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("The Super Ball - RIN! RIN HI! HI!") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[154][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[154][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[154][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[154][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("DJ TOTTO - Precious * Star [feat. Enako]") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[155][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[155][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[155][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[155][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("One Shot, One Kill - Varien") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[156][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[156][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[156][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[156][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
 			}
 	

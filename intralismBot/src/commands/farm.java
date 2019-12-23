@@ -195,72 +195,77 @@ public class farm {
 						if(avcount<13) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 1/13");
+						eb.setFooter("Page 1/14");
 					} else if(page == 1) {
 						if(avcount<13) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 1/13");
+						eb.setFooter("Page 1/14");
 					} else if(page == 2) {
 						if(avcount>12 && avcount<25) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 2/13");
+						eb.setFooter("Page 2/14");
 					} else if(page == 3) {
 						if(avcount>24 && avcount<37) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 3/13");
+						eb.setFooter("Page 3/14");
 					} else if(page == 4) {
 						if(avcount>36 && avcount<49) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 4/13");
+						eb.setFooter("Page 4/14");
 					} else if(page == 5) {
 						if(avcount>48 && avcount<61) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 5/13");
+						eb.setFooter("Page 5/14");
 					} else if(page == 6) {
 						if(avcount>60 && avcount<73) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 6/13");
+						eb.setFooter("Page 6/14");
 					} else if(page == 7) {
 						if(avcount>72 && avcount<85) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 7/13");
+						eb.setFooter("Page 7/14");
 					} else if(page == 8) {
 						if(avcount>84 && avcount<97) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 8/13");
+						eb.setFooter("Page 8/14");
 					} else if(page == 9) {
 						if(avcount>96 && avcount<109) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 9/13");
+						eb.setFooter("Page 9/14");
 					} else if(page == 10) {
 						if(avcount>108 && avcount<121) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 10/13");
+						eb.setFooter("Page 10/14");
 					} else if(page == 11) {
 						if(avcount>120 && avcount<133) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 11/13");
+						eb.setFooter("Page 11/14");
 					} else if(page == 12) {
 						if(avcount>132 && avcount<145) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 12/13");
+						eb.setFooter("Page 12/14");
 					} else if(page == 13) {
 						if(avcount>144 && avcount<157) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
-						eb.setFooter("Page 13/13");
+						eb.setFooter("Page 13/14");
+					} else if(page == 14) {
+						if(avcount>156 && avcount<169) {
+							eb.addField(""+alldata[i][0],""+avpoints,true);
+						}
+						eb.setFooter("Page 14/14");
 					}
 				}
 			}

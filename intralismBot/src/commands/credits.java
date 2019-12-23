@@ -14,8 +14,8 @@ public class credits {
 		
 		EmbedBuilder eb = new EmbedBuilder();
 		eb.setDescription("The Intralism Bot was programmed by Ludeo#8554 and it is open source. When you click on \"Ludeo#8554\" you will get to the github page." 
-		+ "\nSpecial Thanks to FlyingRabidUnicornPig™#5435 for helping me out with the code and Special Thanks to Kiri#1000 for checking"
-		+ " all maps to see if they are broken or not.");
+		+ "\nSpecial Thanks to FlyingRabidUnicornPig™#5435 for helping me out with the code, Special Thanks to Kiri#1000 for checking"
+		+ " all maps to see if they are broken or not and Special Thanks to Yokkako#3451 for changing the color of the Intralism Bots profile picture.");
 		eb.setAuthor("Ludeo#8554","https://github.com/Ludeo/Intralism-Bot",  url);
 		eb.setColor(pink);
 		event.getMessage().getChannel().sendMessage(eb.build()).queue();
