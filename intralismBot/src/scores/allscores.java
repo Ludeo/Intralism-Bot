@@ -200,7 +200,7 @@ public class allscores {
     	allscores[43][7] = (String)"Broken";
     	
     	allscores[44][0] = (String)"Halozy - Three Magic";
-    	allscores[44][5] = (double) 13.17;
+    	allscores[44][5] = (double) 13.12;
     	allscores[44][7] = (String)"Not Broken";
     	
     	allscores[45][0] = (String)"Halsey ‒ Gasoline";

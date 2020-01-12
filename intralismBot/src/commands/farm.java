@@ -125,10 +125,7 @@ public class farm {
 				eb.setColor(black);
 			} else {
 				grank = Integer.parseInt(globalrank);
-				if(grank == 1) {
-					Color green = new Color(0,255,0);
-					eb.setColor(green);
-				}else if(grank <= 10 ) {
+				if(grank <= 10 ) {
 					Color yellow = new Color(255,215,0);
 					eb.setColor(yellow);
 				} else if(grank > 10 && grank <=25) {

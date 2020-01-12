@@ -123,8 +123,11 @@ public class score {
 		try {
 			Object[][] scoresObj = scores.allscores.getAllScores("https://intralism.khb-soft.ru/?player=" + id);
 			boolean bool = false;
-			EmbedBuilder eb = new EmbedBuilder();
+			
 			for (int i = 0; i<scoresObj.length;i++) {
+				
+				EmbedBuilder eb = new EmbedBuilder();
+				
 				if(scoresObj[i][0].toString().toLowerCase().contains(mapname)) {
 					if(scoresObj[i][1] == null) {
 						scoresObj[i][1] = (int)0;
@@ -166,10 +169,7 @@ public class score {
 							eb.setColor(black);
 						} else {
 							grank = Integer.parseInt(rank);
-							if(grank == 1) {
-								Color green = new Color(0,255,0);
-								eb.setColor(green);
-							}else if(grank <=10 ) {
+							if(grank <=10 ) {
 								Color yellow = new Color(255,215,0);
 								eb.setColor(yellow);
 							} else if(grank > 10 && grank <=25) {
