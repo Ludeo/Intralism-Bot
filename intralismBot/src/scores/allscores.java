@@ -13,7 +13,7 @@ public class allscores {
 		String profileInfo = doc.toString();
 		BufferedReader bufReader = new BufferedReader(new StringReader(profileInfo));
 		String line=null;
-		Object allscores[][] = new Object[157][8];
+		Object allscores[][] = new Object[162][8];
 		
 		for(int i = 0; i<allscores.length;i++) {
 			allscores[i][1] = (int) 0;
@@ -650,6 +650,26 @@ public class allscores {
     	allscores[156][0] = (String)"One Shot, One Kill - Varien";
     	allscores[156][5] = (double) 18.6;
     	allscores[156][7] = (String)"Not Broken";
+    	
+    	allscores[157][0] = (String)"Roomie - Brofist (feat. PewDiePie)";
+    	allscores[157][5] = (double) 10.55;
+    	allscores[157][7] = (String)"Not Broken";
+    	
+    	allscores[158][0] = (String)"SAO Alternative: GGO Ryusei - Eir Aoi";
+    	allscores[158][5] = (double) 6.43;
+    	allscores[158][7] = (String)"Broken";
+    	
+    	allscores[159][0] = (String)"Chochocho! Yuru Yuri*Capriccio!!!";
+    	allscores[159][5] = (double) 17.06;
+    	allscores[159][7] = (String)"Broken";
+    	
+    	allscores[160][0] = (String)"Max Brhon - Cyberpunk";
+    	allscores[160][5] = (double) 23.23;
+    	allscores[160][7] = (String)"Broken";
+    	
+    	allscores[161][0] = (String)"Pastel*Palettes - DISCOTHEQUE";
+    	allscores[161][5] = (double) 9.02;
+    	allscores[161][7] = (String)"Not Broken";
     	
 		while((line=bufReader.readLine()) != null)
 		{
@@ -1596,6 +1616,36 @@ public class allscores {
 		    	allscores[156][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[156][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[156][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Roomie - Brofist (feat. PewDiePie)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[157][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[157][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[157][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[157][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("SAO Alternative: GGO Ryusei - Eir Aoi") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[158][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[158][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[158][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[158][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Chochocho! Yuru Yuri*Capriccio!!!") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[159][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[159][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[159][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[159][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Max Brhon - Cyberpunk") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[160][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[160][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[160][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[160][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Pastel*Palettes - DISCOTHEQUE") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[161][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[161][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[161][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[161][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
 			}
 	

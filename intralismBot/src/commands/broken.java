@@ -27,22 +27,27 @@ public class broken {
 					if(page == 0) {
 						if(broken<26) {
 							allmaps += scoresObj[i][0] +"\n";
-							eb.setFooter("Page 1/3");
+							eb.setFooter("Page 1/4");
 						}
 					} else if(page == 1) {
 						if(broken<26) {
 							allmaps += scoresObj[i][0] +"\n";
-							eb.setFooter("Page 1/3");
+							eb.setFooter("Page 1/4");
 						}
 					} else if(page == 2) {
 						if(broken>25 && broken<51) {
 							allmaps += scoresObj[i][0] +"\n";
-							eb.setFooter("Page 2/3");
+							eb.setFooter("Page 2/4");
 						}
 					} else if(page == 3) {
 						if(broken>50 && broken<76) {
 							allmaps += scoresObj[i][0] +"\n";
-							eb.setFooter("Page 3/3");
+							eb.setFooter("Page 3/4");
+						}
+					} else if(page == 4) {
+						if(broken>75 && broken<101) {
+							allmaps += scoresObj[i][0] +"\n";
+							eb.setFooter("Page 4/4");
 						}
 					}
 					
