@@ -24,7 +24,7 @@ public class score {
 			Object user = new Object();
 			
 			try {
-				user = jsonParser.parse(new FileReader(".\\user.json"));
+				user = jsonParser.parse(new FileReader("user.json"));
 			} catch (IOException | ParseException e) {
 				e.printStackTrace();
 				user = "";
@@ -79,7 +79,7 @@ public class score {
 				Object userO = new Object();
 				
 				try {
-					userO = jsonParser.parse(new FileReader(".\\user.json"));
+					userO = jsonParser.parse(new FileReader("user.json"));
 				} catch (IOException | ParseException e) {
 					e.printStackTrace();
 					userO = "";

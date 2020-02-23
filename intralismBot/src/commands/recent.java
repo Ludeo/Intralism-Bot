@@ -73,7 +73,7 @@ public class recent {
 				Object userO = new Object();
 				
 				try {
-					userO = jsonParser.parse(new FileReader(".\\user.json"));
+					userO = jsonParser.parse(new FileReader("user.json"));
 				} catch (IOException | ParseException e) {
 					e.printStackTrace();
 					userO = "";

@@ -30,7 +30,7 @@ public class link {
 		Object oldUser = new Object();
 		
 		try {
-			oldUser = jsonParser.parse(new FileReader(".\\user.json"));
+			oldUser = jsonParser.parse(new FileReader("user.json"));
 		} catch (IOException | ParseException e) {
 			e.printStackTrace();
 			oldUser = "";
@@ -61,7 +61,7 @@ public class link {
 				userDetails.put("IntralismID", intralismid);
 				user.add(userDetails);
 				
-				try (FileWriter file = new FileWriter(".\\user.json")) {
+				try (FileWriter file = new FileWriter("user.json")) {
 				    file.write(user.toString());
 				} catch (IOException e) {
 				    e.printStackTrace();
@@ -88,7 +88,7 @@ public class link {
 				}
 			}
 
-			try (FileWriter file = new FileWriter(".\\user.json")) {
+			try (FileWriter file = new FileWriter("user.json")) {
 			    file.write(user.toString());
 			} catch (IOException e) {
 			    e.printStackTrace();

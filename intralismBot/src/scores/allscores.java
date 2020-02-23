@@ -13,7 +13,7 @@ public class allscores {
 		String profileInfo = doc.toString();
 		BufferedReader bufReader = new BufferedReader(new StringReader(profileInfo));
 		String line=null;
-		Object allscores[][] = new Object[162][8];
+		Object allscores[][] = new Object[167][8];
 		
 		for(int i = 0; i<allscores.length;i++) {
 			allscores[i][1] = (int) 0;
@@ -670,6 +670,26 @@ public class allscores {
     	allscores[161][0] = (String)"Pastel*Palettes - DISCOTHEQUE";
     	allscores[161][5] = (double) 9.02;
     	allscores[161][7] = (String)"Not Broken";
+    	
+    	allscores[162][0] = (String)"Hashimoto Yukari - Lost My Pieces (Toradora!)";
+    	allscores[162][5] = (double) 4.48;
+    	allscores[162][7] = (String)"Not Broken";
+    	
+    	allscores[163][0] = (String)"LiSA - Oath Sign";
+    	allscores[163][5] = (double) 10.29;
+    	allscores[163][7] = (String)"Broken";
+    	
+    	allscores[164][0] = (String)"ДЕТИ RAVE (DETI RAVE) - КАК В ПОСЛЕДНИЙ РАЗ (AS THE LAST TIME)";
+    	allscores[164][5] = (double) 13.75;
+    	allscores[164][7] = (String)"Not Broken";
+    	
+    	allscores[165][0] = (String)"Loki / Thaehan - Ohayou !";
+    	allscores[165][5] = (double) 18.5;
+    	allscores[165][7] = (String)"Not Broken";
+    	
+    	allscores[166][0] = (String)"Seiryu - Blue Dragon";
+    	allscores[166][5] = (double) 20.78;
+    	allscores[166][7] = (String)"Not Broken";
     	
 		while((line=bufReader.readLine()) != null)
 		{
@@ -1646,6 +1666,36 @@ public class allscores {
 		    	allscores[161][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[161][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[161][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Hashimoto Yukari - Lost My Pieces (Toradora!)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[162][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[162][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[162][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[162][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("LiSA - Oath Sign") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[163][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[163][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[163][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[163][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("ДЕТИ RAVE (DETI RAVE) - КАК В ПОСЛЕДНИЙ РАЗ (AS THE LAST TIME)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[164][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[164][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[164][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[164][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Loki / Thaehan - Ohayou !") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[165][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[165][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[165][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[165][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Seiryu - Blue Dragon") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[166][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[166][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[166][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[166][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
 			}
 	
