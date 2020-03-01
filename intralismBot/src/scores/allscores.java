@@ -13,7 +13,7 @@ public class allscores {
 		String profileInfo = doc.toString();
 		BufferedReader bufReader = new BufferedReader(new StringReader(profileInfo));
 		String line=null;
-		Object allscores[][] = new Object[167][8];
+		Object allscores[][] = new Object[172][8];
 		
 		for(int i = 0; i<allscores.length;i++) {
 			allscores[i][1] = (int) 0;
@@ -690,6 +690,26 @@ public class allscores {
     	allscores[166][0] = (String)"Seiryu - Blue Dragon";
     	allscores[166][5] = (double) 20.78;
     	allscores[166][7] = (String)"Not Broken";
+    	
+    	allscores[167][0] = (String)"Jin ft.Lia - days (TV size)";
+    	allscores[167][5] = (double) 4.84;
+    	allscores[167][7] = (String)"Not Broken";
+    	
+    	allscores[168][0] = (String)"A.O.E. - Crystal Clocks and Music Box";
+    	allscores[168][5] = (double) 12.64;
+    	allscores[168][7] = (String)"Not Broken";
+    	
+    	allscores[169][0] = (String)"F777 - The Seven Seas";
+    	allscores[169][5] = (double) 19.59;
+    	allscores[169][7] = (String)"Not Broken";
+    	
+    	allscores[170][0] = (String)"Witch's Slave - Trappola Bewitching";
+    	allscores[170][5] = (double) 21.79;
+    	allscores[170][7] = (String)"Not Broken";
+    	
+    	allscores[171][0] = (String)"Billie Eilish - bad guy [bad]";
+    	allscores[171][5] = (double) 10.1;
+    	allscores[171][7] = (String)"Not Broken";
     	
 		while((line=bufReader.readLine()) != null)
 		{
@@ -1696,6 +1716,36 @@ public class allscores {
 		    	allscores[166][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[166][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[166][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Jin ft.Lia - days (TV size)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[167][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[167][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[167][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[167][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("A.O.E. - Crystal Clocks and Music Box") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[168][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[168][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[168][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[168][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("F777 - The Seven Seas") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[169][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[169][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[169][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[169][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Witch's Slave - Trappola Bewitching") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[170][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[170][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[170][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[170][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Billie Eilish - bad guy [bad]") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[171][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[171][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[171][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[171][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
 			}
 	
