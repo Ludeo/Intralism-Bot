@@ -15,6 +15,7 @@ public class allscores {
 	
 	public static void main(String[] args, String prefix, MessageReceivedEvent event, int page) {
 		String id = "";
+		String pages = "30";
 		if(args.length == 1) {
 			String discordid = event.getMessage().getAuthor().getId();
 			
@@ -172,7 +173,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 1/29");
+							eb.setFooter("Page 1/"+pages);
 						}
 					}
 				} else if(page == 1) {
@@ -205,7 +206,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 1/29");
+							eb.setFooter("Page 1/"+pages);
 						}
 					}
 					
@@ -239,7 +240,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 2/29");
+							eb.setFooter("Page 2/"+pages);
 						}
 					}
 				} else if(page == 3) {
@@ -272,7 +273,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 3/29");
+							eb.setFooter("Page 3/"+pages);
 						}
 					}
 				} else if(page == 4) {
@@ -305,7 +306,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 4/29");
+							eb.setFooter("Page 4/"+pages);
 						}
 					}
 				} else if(page == 5) {
@@ -338,7 +339,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 5/29");
+							eb.setFooter("Page 5/"+pages);
 						}
 					}
 				} else if(page == 6) {
@@ -371,7 +372,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 6/29");
+							eb.setFooter("Page 6/"+pages);
 						}
 					}
 				} else if(page == 7) {
@@ -404,7 +405,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 7/29");
+							eb.setFooter("Page 7/"+pages);
 						}
 					}
 				} else if(page == 8) {
@@ -437,7 +438,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 8/29");
+							eb.setFooter("Page 8/"+pages);
 						}
 					}
 				} else if(page == 9) {
@@ -470,7 +471,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 9/29");
+							eb.setFooter("Page 9/"+pages);
 						}
 					}
 				} else if(page == 10) {
@@ -503,7 +504,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 10/29");
+							eb.setFooter("Page 10/"+pages);
 						}
 					}
 				} else if(page == 11) {
@@ -536,7 +537,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 11/29");
+							eb.setFooter("Page 11/"+pages);
 						}
 					}
 				} else if(page == 12) {
@@ -569,7 +570,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 12/29");
+							eb.setFooter("Page 12/"+pages);
 						}
 					}
 				} else if(page == 13) {
@@ -602,7 +603,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 13/29");
+							eb.setFooter("Page 13/"+pages);
 						}
 					}
 				} else if(page == 14) {
@@ -635,7 +636,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 14/29");
+							eb.setFooter("Page 14/"+pages);
 						}
 					}
 				} else if(page == 15) {
@@ -668,7 +669,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 15/29");
+							eb.setFooter("Page 15/"+pages);
 						}
 					}
 				} else if(page == 16) {
@@ -701,7 +702,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 16/29");
+							eb.setFooter("Page 16/"+pages);
 						}
 					}
 				} else if(page == 17) {
@@ -734,7 +735,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 17/29");
+							eb.setFooter("Page 17/"+pages);
 						}
 					}
 				} else if(page == 18) {
@@ -767,7 +768,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 18/29");
+							eb.setFooter("Page 18/"+pages);
 						}
 					}
 				} else if(page == 19) {
@@ -800,7 +801,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 19/29");
+							eb.setFooter("Page 19/"+pages);
 						}
 					}
 				} else if(page == 20) {
@@ -833,7 +834,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 20/29");
+							eb.setFooter("Page 20/"+pages);
 						}
 					}
 				} else if(page == 21) {
@@ -866,7 +867,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 21/29");
+							eb.setFooter("Page 21/"+pages);
 						}
 					}
 				} else if(page == 22) {
@@ -899,7 +900,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 22/29");
+							eb.setFooter("Page 22/"+pages);
 						}
 					}
 				} else if(page == 23) {
@@ -932,7 +933,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 23/29");
+							eb.setFooter("Page 23/"+pages);
 						}
 					}
 				} else if(page == 24) {
@@ -965,7 +966,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 24/29");
+							eb.setFooter("Page 24/"+pages);
 						}
 					}
 				} else if(page == 25) {
@@ -998,7 +999,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 25/29");
+							eb.setFooter("Page 25/"+pages);
 						}
 					}
 				} else if(page == 26) {
@@ -1031,7 +1032,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 26/29");
+							eb.setFooter("Page 26/"+pages);
 						}
 					}
 				} else if(page == 27) {
@@ -1064,7 +1065,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 27/29");
+							eb.setFooter("Page 27/"+pages);
 						}
 					}
 				} else if(page == 28) {
@@ -1097,7 +1098,7 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 28/29");
+							eb.setFooter("Page 28/"+pages);
 						}
 					}
 				} else if(page == 29) {
@@ -1130,7 +1131,40 @@ public class allscores {
 							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
-							eb.setFooter("Page 29/29");
+							eb.setFooter("Page 29/"+pages);
+						}
+					}
+				} else if(page == 30) {
+					if(i>173 && i<180) {
+						if(alldata[i][1] == null) {
+							alldata[i][1] = (int)0;
+							alldata[i][2] = (double)0;
+							alldata[i][3] = (int)0;
+							alldata[i][4] = (double)0;
+							alldata[i][6] = (double)0;
+							
+						} else {
+							if(alldata[i][7].equals("Broken")) {
+								if((double)alldata[i][4]==(double)alldata[i][5]) {
+									if(alldata[i][0] == "Indigo Child - Nostalgia") {
+										alldata[i][4] = (double) 1.87;
+									} else if(alldata[i][0] == "Mizutani Hiromi - Hidamari Michi to Ren-chon") {
+										alldata[i][4] = (double) 2.11;
+									} else if(alldata[i][0] == "Oskar Schuster - Wunder") {
+										alldata[i][4] = (double) 2.86;
+									} else {
+										double actualpoints = (double)alldata[i][5]-0.01;
+										alldata[i][4] = actualpoints;
+									}
+									
+								}
+							}
+							double difference = (double)alldata[i][5] - (double)alldata[i][4];
+							difference = (double)Math.round(difference * 100)/100;
+							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
+							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
+							+alldata[i][7],true);
+							eb.setFooter("Page 30/"+pages);
 						}
 					}
 				}

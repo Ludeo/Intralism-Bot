@@ -13,7 +13,7 @@ public class allscores {
 		String profileInfo = doc.toString();
 		BufferedReader bufReader = new BufferedReader(new StringReader(profileInfo));
 		String line=null;
-		Object allscores[][] = new Object[172][8];
+		Object allscores[][] = new Object[177][8];
 		
 		for(int i = 0; i<allscores.length;i++) {
 			allscores[i][1] = (int) 0;
@@ -710,6 +710,26 @@ public class allscores {
     	allscores[171][0] = (String)"Billie Eilish - bad guy [bad]";
     	allscores[171][5] = (double) 10.1;
     	allscores[171][7] = (String)"Not Broken";
+    	
+    	allscores[172][0] = (String)"Asami Imai - Asayake no Starmine (TV Size)";
+    	allscores[172][5] = (double) 5.57;
+    	allscores[172][7] = (String)"Not Broken";
+    	
+    	allscores[173][0] = (String)"Daft Punk - Rinzler (TRON)";
+    	allscores[173][5] = (double) 14.79;
+    	allscores[173][7] = (String)"Not Broken";
+    	
+    	allscores[174][0] = (String)"Diamond Eyes - Hold On";
+    	allscores[174][5] = (double) 10.87;
+    	allscores[174][7] = (String)"Broken";
+    	
+    	allscores[175][0] = (String)"Panda Eyes & Teminite - Immortal Flame (ft. Anna Yvette)";
+    	allscores[175][5] = (double) 19.68;
+    	allscores[175][7] = (String)"idk";
+    	
+    	allscores[176][0] = (String)"HyuN - Illusion of Inflict";
+    	allscores[176][5] = (double) 25.93;
+    	allscores[176][7] = (String)"Not Broken";
     	
 		while((line=bufReader.readLine()) != null)
 		{
@@ -1746,6 +1766,36 @@ public class allscores {
 		    	allscores[171][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[171][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[171][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Asami Imai - Asayake no Starmine (TV Size)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[172][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[172][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[172][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[172][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Daft Punk - Rinzler (TRON)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[173][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[173][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[173][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[173][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Diamond Eyes - Hold On") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[174][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[174][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[174][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[174][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Teminite - Immortal Flame (ft. Anna Yvette)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[175][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[175][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[175][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[175][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("HyuN - Illusion of Inflict") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[176][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[176][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[176][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[176][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
 			}
 	
