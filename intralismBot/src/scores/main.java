@@ -18,7 +18,7 @@ public class main extends ListenerAdapter {
 	
 	public static void main(String args[]) throws LoginException {
 		JDABuilder builder = new JDABuilder(AccountType.BOT);
-		builder.setToken("MzQwODczNjkzNDY0ODg3Mjk4.XdxqHw.HiHz6VaZpwzbLW17KKOFHoy0B8I"); //change ID in ReactionEvent
+		builder.setToken(""); //change ID in ReactionEvent
 		builder.addEventListeners(new main());
 		builder.addEventListeners(new GuildMessageReactionEventListener());
 		builder.setActivity(Activity.playing("Intralism"));
