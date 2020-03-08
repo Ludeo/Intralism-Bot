@@ -14,11 +14,11 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class main extends ListenerAdapter {
 	
-	String prefix = "i!";
+	String prefix = "i!"; //change prefix here
 	
 	public static void main(String args[]) throws LoginException {
 		JDABuilder builder = new JDABuilder(AccountType.BOT);
-		builder.setToken(""); //change ID in ReactionEvent
+		builder.setToken(""); //add bot token here //change ID in ReactionEvent
 		builder.addEventListeners(new main());
 		builder.addEventListeners(new GuildMessageReactionEventListener());
 		builder.setActivity(Activity.playing("Intralism"));
