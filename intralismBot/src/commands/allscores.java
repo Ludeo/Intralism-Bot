@@ -15,7 +15,7 @@ public class allscores {
 	
 	public static void main(String[] args, String prefix, MessageReceivedEvent event, int page) {
 		String id = "";
-		String pages = "30";
+		String pages = "31";
 		if(args.length == 1) {
 			String discordid = event.getMessage().getAuthor().getId();
 			
@@ -1165,6 +1165,39 @@ public class allscores {
 							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
 							+alldata[i][7],true);
 							eb.setFooter("Page 30/"+pages);
+						}
+					}
+				} else if(page == 31) {
+					if(i>179 && i<186) {
+						if(alldata[i][1] == null) {
+							alldata[i][1] = (int)0;
+							alldata[i][2] = (double)0;
+							alldata[i][3] = (int)0;
+							alldata[i][4] = (double)0;
+							alldata[i][6] = (double)0;
+							
+						} else {
+							if(alldata[i][7].equals("Broken")) {
+								if((double)alldata[i][4]==(double)alldata[i][5]) {
+									if(alldata[i][0] == "Indigo Child - Nostalgia") {
+										alldata[i][4] = (double) 1.87;
+									} else if(alldata[i][0] == "Mizutani Hiromi - Hidamari Michi to Ren-chon") {
+										alldata[i][4] = (double) 2.11;
+									} else if(alldata[i][0] == "Oskar Schuster - Wunder") {
+										alldata[i][4] = (double) 2.86;
+									} else {
+										double actualpoints = (double)alldata[i][5]-0.01;
+										alldata[i][4] = actualpoints;
+									}
+									
+								}
+							}
+							double difference = (double)alldata[i][5] - (double)alldata[i][4];
+							difference = (double)Math.round(difference * 100)/100;
+							eb.addField(alldata[i][0]+"","Score: "+alldata[i][1]+"\nAccuracy: "+alldata[i][2]+"%\nMisses: "+alldata[i][3]
+							+"\nPoints: "+alldata[i][4]+"\nMax Points: "+alldata[i][5]+"\nDifference: "+difference+"\nBroken?: "
+							+alldata[i][7],true);
+							eb.setFooter("Page 31/"+pages);
 						}
 					}
 				}

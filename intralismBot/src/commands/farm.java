@@ -17,7 +17,7 @@ public class farm {
 	
 	public static void main(String args[], String prefix, MessageReceivedEvent event, int page) {
 		String id = "";
-		String pages = "15";
+		String pages = "16";
 		if(args.length == 1) {
 			String discordid = event.getMessage().getAuthor().getId();
 			
@@ -264,11 +264,16 @@ public class farm {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
 						eb.setFooter("Page 14/"+pages);
-					} else if(page == 14) {
+					} else if(page == 15) {
 						if(avcount>168 && avcount<181) {
 							eb.addField(""+alldata[i][0],""+avpoints,true);
 						}
 						eb.setFooter("Page 15/"+pages);
+					} else if(page == 16) {
+						if(avcount>180 && avcount<193) {
+							eb.addField(""+alldata[i][0],""+avpoints,true);
+						}
+						eb.setFooter("Page 16/"+pages);
 					}
 					
 				}
