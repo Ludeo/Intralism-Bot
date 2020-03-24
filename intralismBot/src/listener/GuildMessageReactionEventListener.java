@@ -71,7 +71,7 @@ public class GuildMessageReactionEventListener extends ListenerAdapter {
 	                		if(reaction.contentEquals("▶")) {
 	                			commands.allscores.main(args,"i!",event1,2);
 	                		} else if(reaction.contentEquals("◀")) {
-	                			commands.allscores.main(args,"i!",event1,31);
+	                			commands.allscores.main(args,"i!",event1,32);
 	                		}
 	                		
 	            		} else if(page.contentEquals("2")) {
@@ -339,9 +339,18 @@ public class GuildMessageReactionEventListener extends ListenerAdapter {
 	            			MessageReceivedEvent event1 = new MessageReceivedEvent(event.getJDA(), 0, messages.get(0));
 	                		String[] args = {""};
 	                		if(reaction.contentEquals("▶")) {
-	                			commands.allscores.main(args,"i!",event1,1);
+	                			commands.allscores.main(args,"i!",event1,32);
 	                		} else if(reaction.contentEquals("◀")) {
 	                			commands.allscores.main(args,"i!",event1,30);
+	                		}
+	                		
+	            		} else if(page.contentEquals("32")) {
+	            			MessageReceivedEvent event1 = new MessageReceivedEvent(event.getJDA(), 0, messages.get(0));
+	                		String[] args = {""};
+	                		if(reaction.contentEquals("▶")) {
+	                			commands.allscores.main(args,"i!",event1,1);
+	                		} else if(reaction.contentEquals("◀")) {
+	                			commands.allscores.main(args,"i!",event1,31);
 	                		}
 	                		
 	            		}

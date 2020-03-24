@@ -13,7 +13,7 @@ public class allscores {
 		String profileInfo = doc.toString();
 		BufferedReader bufReader = new BufferedReader(new StringReader(profileInfo));
 		String line=null;
-		Object allscores[][] = new Object[182][8];
+		Object allscores[][] = new Object[187][8];
 		
 		for(int i = 0; i<allscores.length;i++) {
 			allscores[i][1] = (int) 0;
@@ -749,7 +749,27 @@ public class allscores {
     	
     	allscores[181][0] = (String)"ONE OK ROCK - Liar";
     	allscores[181][5] = (double) 22.65;
-    	allscores[181][7] = (String)"idk";
+    	allscores[181][7] = (String)"Broken";
+    	
+    	allscores[182][0] = (String)"FELT - In my room";
+    	allscores[182][5] = (double) 8.92;
+    	allscores[182][7] = (String)"Not Broken";
+    	
+    	allscores[183][0] = (String)"GAMERS! - Kanemoto Hisako & Iwami Manaka & Ookubo Rumi";
+    	allscores[183][5] = (double) 10.98;
+    	allscores[183][7] = (String)"Broken";
+    	
+    	allscores[184][0] = (String)"Jens.O - \"Somebody\" (nightcore mix)";
+    	allscores[184][5] = (double) 11.81;
+    	allscores[184][7] = (String)"idk";
+    	
+    	allscores[185][0] = (String)"Stonebank - Ripped To Pieces [Cut]";
+    	allscores[185][5] = (double) 15.6;
+    	allscores[185][7] = (String)"Not Broken";
+    	
+    	allscores[186][0] = (String)"P*Light - Gekkou Ranbu";
+    	allscores[186][5] = (double) 22.41;
+    	allscores[186][7] = (String)"Broken";
     	
 		while((line=bufReader.readLine()) != null)
 		{
@@ -1846,6 +1866,36 @@ public class allscores {
 		    	allscores[181][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[181][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[181][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("FELT - In my room") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[182][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[182][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[182][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[182][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("GAMERS! - Kanemoto Hisako") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[183][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[183][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[183][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[183][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Jens.O - \"Somebody\" (nightcore mix)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[184][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[184][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[184][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[184][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Stonebank - Ripped To Pieces [Cut]") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[185][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[185][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[185][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[185][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("P*Light - Gekkou Ranbu") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[186][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[186][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[186][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[186][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
 			}
 	
