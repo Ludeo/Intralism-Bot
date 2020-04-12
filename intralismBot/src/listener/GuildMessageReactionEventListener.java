@@ -71,7 +71,7 @@ public class GuildMessageReactionEventListener extends ListenerAdapter {
 	                		if(reaction.contentEquals("▶")) {
 	                			commands.allscores.main(args,"i!",event1,2);
 	                		} else if(reaction.contentEquals("◀")) {
-	                			commands.allscores.main(args,"i!",event1,32);
+	                			commands.allscores.main(args,"i!",event1,34);
 	                		}
 	                		
 	            		} else if(page.contentEquals("2")) {
@@ -348,9 +348,27 @@ public class GuildMessageReactionEventListener extends ListenerAdapter {
 	            			MessageReceivedEvent event1 = new MessageReceivedEvent(event.getJDA(), 0, messages.get(0));
 	                		String[] args = {""};
 	                		if(reaction.contentEquals("▶")) {
-	                			commands.allscores.main(args,"i!",event1,1);
+	                			commands.allscores.main(args,"i!",event1,33);
 	                		} else if(reaction.contentEquals("◀")) {
 	                			commands.allscores.main(args,"i!",event1,31);
+	                		}
+	                		
+	            		} else if(page.contentEquals("33")) {
+	            			MessageReceivedEvent event1 = new MessageReceivedEvent(event.getJDA(), 0, messages.get(0));
+	                		String[] args = {""};
+	                		if(reaction.contentEquals("▶")) {
+	                			commands.allscores.main(args,"i!",event1,34);
+	                		} else if(reaction.contentEquals("◀")) {
+	                			commands.allscores.main(args,"i!",event1,32);
+	                		}
+	                		
+	            		} else if(page.contentEquals("34")) {
+	            			MessageReceivedEvent event1 = new MessageReceivedEvent(event.getJDA(), 0, messages.get(0));
+	                		String[] args = {""};
+	                		if(reaction.contentEquals("▶")) {
+	                			commands.allscores.main(args,"i!",event1,1);
+	                		} else if(reaction.contentEquals("◀")) {
+	                			commands.allscores.main(args,"i!",event1,33);
 	                		}
 	                		
 	            		}
@@ -415,7 +433,7 @@ public class GuildMessageReactionEventListener extends ListenerAdapter {
 	                		if(reaction.contentEquals("▶")) {
 	                			commands.farm.main(args,"i!",event1,2);
 	                		} else if(reaction.contentEquals("◀")) {
-	                			commands.farm.main(args,"i!",event1,14);
+	                			commands.farm.main(args,"i!",event1,17);
 	                		}
 	                		
 	        			} else if(page.contentEquals("1")) {
@@ -424,7 +442,7 @@ public class GuildMessageReactionEventListener extends ListenerAdapter {
 	                		if(reaction.contentEquals("▶")) {
 	                			commands.farm.main(args,"i!",event1,2);
 	                		} else if(reaction.contentEquals("◀")) {
-	                			commands.farm.main(args,"i!",event1,14);
+	                			commands.farm.main(args,"i!",event1,17);
 	                		}
 	                		
 	        			} else if(page.contentEquals("2")) {
@@ -557,9 +575,18 @@ public class GuildMessageReactionEventListener extends ListenerAdapter {
 	        				MessageReceivedEvent event1 = new MessageReceivedEvent(event.getJDA(), 0, messages.get(0));
 	                		String[] args = {""};
 	                		if(reaction.contentEquals("▶")) {
-	                			commands.farm.main(args,"i!",event1,1);
+	                			commands.farm.main(args,"i!",event1,17);
 	                		} else if(reaction.contentEquals("◀")) {
 	                			commands.farm.main(args,"i!",event1,15);
+	                		}
+	                		
+	        			} else if(page.contentEquals("17")) {
+	        				MessageReceivedEvent event1 = new MessageReceivedEvent(event.getJDA(), 0, messages.get(0));
+	                		String[] args = {""};
+	                		if(reaction.contentEquals("▶")) {
+	                			commands.farm.main(args,"i!",event1,1);
+	                		} else if(reaction.contentEquals("◀")) {
+	                			commands.farm.main(args,"i!",event1,16);
 	                		}
 	                		
 	        			}

@@ -13,7 +13,7 @@ public class allscores {
 		String profileInfo = doc.toString();
 		BufferedReader bufReader = new BufferedReader(new StringReader(profileInfo));
 		String line=null;
-		Object allscores[][] = new Object[187][8];
+		Object allscores[][] = new Object[204][8];
 		
 		for(int i = 0; i<allscores.length;i++) {
 			allscores[i][1] = (int) 0;
@@ -770,6 +770,74 @@ public class allscores {
     	allscores[186][0] = (String)"P*Light - Gekkou Ranbu";
     	allscores[186][5] = (double) 22.41;
     	allscores[186][7] = (String)"Broken";
+    	
+    	allscores[187][0] = (String)"Hajimari Road - Love Live!";
+	    allscores[187][5] = (double) 11.8;
+	    allscores[187][7] = (String)"Not Broken";
+
+	    allscores[188][0] = (String)"Pascal Michael Stiefel - Peace and Tranquility";
+	    allscores[188][5] = (double) 6.7;
+	    allscores[188][7] = (String)"Broken";
+
+	    allscores[189][0] = (String)"Sayuri x MY FIRST STORY - Reimei (TV Size)";
+	    allscores[189][5] = (double) 11.81;
+	    allscores[189][7] = (String)"Not Broken";
+
+	    allscores[190][0] = (String)"YURiKA - Kyoumen no Nami (TV size)";
+	    allscores[190][5] = (double) 7.78;
+	    allscores[190][7] = (String)"Not Broken";
+
+	    allscores[191][0] = (String)"SYN - Danger";
+	    allscores[191][5] = (double) 22.08;
+	    allscores[191][7] = (String)"Broken";
+	    
+	    allscores[192][0] = (String)"Beginning";
+	    allscores[192][5] = (double) 7.38;
+	    allscores[192][7] = (String)"Not Broken";
+	    
+	    allscores[193][0] = (String)"Miyuri - I'm Still Waiting For You (feat. 60s Radio)";
+	    allscores[193][5] = (double) 7.82;
+	    allscores[193][7] = (String)"Not Broken";
+	   
+	    allscores[194][0] = (String)"Aya Hirano - Bouken Desho Desho (TV size)";
+	    allscores[194][5] = (double) 11.56;
+	    allscores[194][7] = (String)"Not Broken";
+	    
+	    allscores[195][0] = (String)"Aya Hirano - Hare Hare Yukai (TV size)";
+	    allscores[195][5] = (double) 12.64;
+	    allscores[195][7] = (String)"Not Broken";
+	    
+	    allscores[196][0] = (String)"Camellia - Shun no Seafood o Ikashita Curry Fuumi Paella ~808 Chef no Twerk to Trap Jitate~";
+	    allscores[196][5] = (double) 25.83;
+	    allscores[196][7] = (String)"idk";
+	    
+	    allscores[197][0] = (String)"Creo - Unveil";
+	    allscores[197][5] = (double) 2.97;
+	    allscores[197][7] = (String)"idk";
+	    
+	    allscores[198][0] = (String)"Megurine Luka - Lie";
+	    allscores[198][5] = (double) 7.59;
+	    allscores[198][7] = (String)"Not Broken";
+	    
+	    allscores[199][0] = (String)"Ayano Mashiro - ideal white (TV size)";
+	    allscores[199][5] = (double) 10.77;
+	    allscores[199][7] = (String)"Not Broken";
+	    
+	    allscores[200][0] = (String)"KANA-BOON - Silhouette";
+	    allscores[200][5] = (double) 11.44;
+	    allscores[200][7] = (String)"Broken";
+	    
+	    allscores[201][0] = (String)"Frederic - Kanashii Ureshii";
+	    allscores[201][5] = (double) 12.78;
+	    allscores[201][7] = (String)"Broken";
+	    
+	    allscores[202][0] = (String)"Kotori ft. Stessie - Blooms [cut]";
+	    allscores[202][5] = (double) 18.65;
+	    allscores[202][7] = (String)"Broken";
+	    
+	    allscores[203][0] = (String)"Hatsune Miku - Rubik's Cube";
+	    allscores[203][5] = (double) 31.3;
+	    allscores[203][7] = (String)"idk";
     	
 		while((line=bufReader.readLine()) != null)
 		{
@@ -1896,6 +1964,108 @@ public class allscores {
 		    	allscores[186][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[186][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[186][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Hajimari Road - Love Live!") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[187][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[187][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[187][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[187][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Pascal Michael Stiefel - Peace and Tranquility") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[188][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[188][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[188][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[188][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Sayuri x MY FIRST STORY - Reimei (TV Size)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[189][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[189][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[189][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[189][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("YURiKA - Kyoumen no Nami (TV size)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[190][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[190][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[190][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[190][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("SYN - Danger") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[191][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[191][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[191][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[191][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Beginning") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[192][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[192][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[192][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[192][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Miyuri - I'm Still Waiting For You (feat. 60s Radio)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[193][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[193][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[193][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[193][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Aya Hirano - Bouken Desho Desho (TV size)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[194][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[194][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[194][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[194][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Aya Hirano - Hare Hare Yukai (TV size)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[195][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[195][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[195][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[195][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Camellia - Shun no Seafood o Ikashita Curry Fuumi Paella ~808 Chef no Twerk to Trap Jitate~") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[196][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[196][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[196][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[196][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Creo - Unveil") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[197][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[197][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[197][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[197][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Megurine Luka - Lie") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[198][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[198][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[198][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[198][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Ayano Mashiro - ideal white (TV size)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[199][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[199][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[199][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[199][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("KANA-BOON - Silhouette") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[200][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[200][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[200][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[200][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Frederic - Kanashii Ureshii") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[201][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[201][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[201][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[201][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Kotori ft. Stessie - Blooms [cut]") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[202][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[202][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[202][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[202][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Hatsune Miku - Rubik's Cube") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[203][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[203][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[203][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[203][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
 			}
 	
