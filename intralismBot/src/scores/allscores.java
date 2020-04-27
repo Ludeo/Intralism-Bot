@@ -13,7 +13,7 @@ public class allscores {
 		String profileInfo = doc.toString();
 		BufferedReader bufReader = new BufferedReader(new StringReader(profileInfo));
 		String line=null;
-		Object allscores[][] = new Object[204][8];
+		Object allscores[][] = new Object[214][8];
 		
 		for(int i = 0; i<allscores.length;i++) {
 			allscores[i][1] = (int) 0;
@@ -737,7 +737,7 @@ public class allscores {
     	
     	allscores[178][0] = (String)"Survive Said The Prophet - Mukanjyo (Vinland Saga)";
     	allscores[178][5] = (double) 11.54;
-    	allscores[178][7] = (String)"Not Broken";
+    	allscores[178][7] = (String)"Broken";
     	
     	allscores[179][0] = (String)"fripSide - Black Bullet";
     	allscores[179][5] = (double) 11.96;
@@ -838,6 +838,46 @@ public class allscores {
 	    allscores[203][0] = (String)"Hatsune Miku - Rubik's Cube";
 	    allscores[203][5] = (double) 31.3;
 	    allscores[203][7] = (String)"idk";
+	    
+	    allscores[204][0] = (String)"Empty Town";
+	    allscores[204][5] = (double) 6.19;
+	    allscores[204][7] = (String)"Not Broken";
+	    
+	    allscores[205][0] = (String)"earthmind - Another Heaven (game ver.)";
+	    allscores[205][5] = (double) 12.12;
+	    allscores[205][7] = (String)"Broken";
+	    
+	    allscores[206][0] = (String)"Haruka Tomatsu - Resolution (TV Size)";
+	    allscores[206][5] = (double) 12.57;
+	    allscores[206][7] = (String)"Broken";
+	   
+	    allscores[207][0] = (String)"MC MENTAL @ HIS BEST";
+	    allscores[207][5] = (double) 22.99;
+	    allscores[207][7] = (String)"Not Broken";
+	    
+	    allscores[208][0] = (String)"OISHII - ONIGIRI FREEWAY";
+	    allscores[208][5] = (double) 27.29;
+	    allscores[208][7] = (String)"Not Broken";
+	    
+	    allscores[209][0] = (String)"【﻿ｎｅｖｅｒ　ｇｉｖｅ　ｕｐ】";
+	    allscores[209][5] = (double) 5.21;
+	    allscores[209][7] = (String)"Not Broken";
+	    
+	    allscores[210][0] = (String)"Luis Fonsi, Omoi and R3 Music Box - Teopacito ft. Will Stetson";
+	    allscores[210][5] = (double) 9.27;
+	    allscores[210][7] = (String)"Not Broken";
+	    
+	    allscores[211][0] = (String)"ASCA - Resister (TV size)";
+	    allscores[211][5] = (double) 13.69;
+	    allscores[211][7] = (String)"Broken";
+	    
+	    allscores[212][0] = (String)"SHK - Halloween Party";
+	    allscores[212][5] = (double) 20.58;
+	    allscores[212][7] = (String)"Broken";
+	    
+	    allscores[213][0] = (String)"Bad Apple!! feat.nomico (Camellia’s “Bad Psy!!” Remix)";
+	    allscores[213][5] = (double) 37.16;
+	    allscores[213][7] = (String)"idk";
     	
 		while((line=bufReader.readLine()) != null)
 		{
@@ -1267,7 +1307,7 @@ public class allscores {
 		    	allscores[70][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[70][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
-			} else if(line.contains("Bad Apple!!") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+			} else if(line.contains("id=1772811738") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
 		    	allscores[71][1] = (int) functions.getScore(bufReader.readLine());
 		    	allscores[71][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[71][3] = (int) functions.getMiss(bufReader.readLine());
@@ -2066,6 +2106,66 @@ public class allscores {
 		    	allscores[203][2] = (double) functions.getAcc(bufReader.readLine());
 		    	allscores[203][3] = (int) functions.getMiss(bufReader.readLine());
 		    	allscores[203][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Empty Town") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[204][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[204][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[204][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[204][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("earthmind - Another Heaven (game ver.)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[205][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[205][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[205][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[205][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Haruka Tomatsu - Resolution (TV Size)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[206][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[206][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[206][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[206][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("MC MENTAL @ HIS BEST") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[207][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[207][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[207][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[207][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("OISHII - ONIGIRI FREEWAY") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[208][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[208][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[208][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[208][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("【﻿ｎｅｖｅｒ　ｇｉｖｅ　ｕｐ】") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[209][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[209][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[209][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[209][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("Luis Fonsi, Omoi and R3 Music Box - Teopacito ft. Will Stetson") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[210][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[210][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[210][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[210][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("ASCA - Resister (TV size)") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[211][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[211][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[211][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[211][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("SHK - Halloween Party") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[212][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[212][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[212][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[212][4] = (double) functions.getPoints(bufReader.readLine());
+		    	
+			} else if(line.contains("id=1896581440") && !line.contains("Random") && !line.contains("Hidden") && !line.contains("Endless")) {
+		    	allscores[213][1] = (int) functions.getScore(bufReader.readLine());
+		    	allscores[213][2] = (double) functions.getAcc(bufReader.readLine());
+		    	allscores[213][3] = (int) functions.getMiss(bufReader.readLine());
+		    	allscores[213][4] = (double) functions.getPoints(bufReader.readLine());
 		    	
 			}
 	
